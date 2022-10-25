@@ -1,5 +1,5 @@
 // To generate value for column 1
-let n = 500;
+let n = 100;
 let columns = { 1: [], 2: [], 3: [] };
 let totalMobileApp = (n * 25) / 100;
 let totalMobileWeb = (n * 30) / 100;
@@ -45,6 +45,8 @@ for (let i = 0; i < n; i++) {
   finalCsvArray.push([columns['1'][i], columns['2'][i], columns['3'][i], '\n']);
 }
 console.log(finalCsvArray);
+renameHeader();
+console.log(finalCsvArray);
 
 // Shuffle array
 function shuffleArray(array) {
@@ -60,15 +62,21 @@ function shuffleArray(array) {
   return array;
 }
 
-let hiddenElement = document.createElement('a');
-hiddenElement.href = 'data:text/csv;charset=utf-8,' + encodeURI(finalCsvArray);
-hiddenElement.target = '_blank';
-const randomFileName = Math.floor(Math.random() * 1000);
-const fileName = 'test' + randomFileName;
-
-//provide the name for the CSV file to be downloaded
-hiddenElement.download = `${fileName}.csv`;
-
+function renameHeader() {
+  let newHeader = ['ECID', 'Device Id', 'page flow'];
+  finalCsvArray[0] = newHeader[0];
+  finalCsvArray[1] = newHeader[1];
+  finalCsvArray[2] = newHeader[2];
+}
+// Click on button to download
 document.getElementById('clickHereToDownliod').onclick = function () {
+  let hiddenElement = document.createElement('a');
+  hiddenElement.href =
+    'data:text/csv;charset=utf-8,' + encodeURI(finalCsvArray);
+  hiddenElement.target = '_blank';
+
+  //provide the name for the CSV file to be downloaded
+  const fileName = 'test' + Math.floor(Math.random() * 1000);
+  hiddenElement.download = `${fileName}.csv`;
   hiddenElement.click();
 };
