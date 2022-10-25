@@ -1,5 +1,5 @@
 // To generate value for column 1
-let n = 1000;
+let n = 500;
 let columns = { 1: [], 2: [], 3: [] };
 let totalMobileApp = (n * 25) / 100;
 let totalMobileWeb = (n * 30) / 100;
@@ -11,7 +11,7 @@ let finalCsvArray = [];
 console.log(totalMobileApp, totalMobileWeb, totalWeb);
 
 for (let i = 0; i < n; i++) {
-  columns['1'].push(Math.floor(Math.random() * 10000000000));
+  columns['1'].push(Math.floor(1000000000 + Math.random() * 9000000000));
 }
 
 for (let i = 0; i < totalMobileApp; i++) {
