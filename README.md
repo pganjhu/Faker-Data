@@ -17,4 +17,4 @@ Remaining to have ‘web’ as value.
 
 ## File to be saved as .csv
 
-### Write a script which can read this csv file and change the name of the col 1, 2, 3 to ‘ECID’, ‘Device ID’ and ‘page flow’ respectively
+Write a script which can read this csv file and change the name of the col 1, 2, 3 to ‘ECID’, ‘Device ID’ and ‘page flow’ respectively
