@@ -1,4 +1,7 @@
 Created Using- https://stackblitz.com/
+
+Run Using- https://stackblitz.com/edit/js-kxnlv6?file=index.js,index.html
+
 # Faker-Data
 
 Generate 10000(count should be changeable) records with 3 columns –
