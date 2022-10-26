@@ -1,5 +1,5 @@
 // To generate value for column 1
-let n = 100;
+let n = 10000;
 let columns = { 1: [], 2: [], 3: [] };
 let totalMobileApp = (n * 25) / 100;
 let totalMobileWeb = (n * 30) / 100;
